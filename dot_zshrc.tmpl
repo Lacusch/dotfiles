@@ -100,3 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+{{ if eq .chezmoi.os "darwin" }}
+# darwin
+source $HOME/.brewconfig.zsh
+{{ else if eq .chezmoi.os "linux" }}
+# linux
+{{ else }}
+# other operating system
+{{ end }}
