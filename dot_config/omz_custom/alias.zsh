@@ -24,3 +24,25 @@ function commit() {
     git add .
     eval "git commit -a -m '${commitMessage}'"
 }
+
+function clone() {
+    if [[ $1 =~ "hub|lab" ]]; then
+        provider="$1"
+        shift
+    else
+        provider="hub"
+    fi
+
+    eval "git clone git@git${provider}.com:$1.git $2"
+}
+
+# Examples
+#commit                             # git add . && git commit -am “📝 Small changes”
+#commit “:recycle: Refactor”        # git add . && git commit -am “♻️ Refactor”
+#clone laravel/laravel              # git clone git@github.com:laravel/laravel.git
+#clone laravel/laravel blog         # git clone git@github.com:laravel/laravel.git blog
+#clone lab lorisleiva/private-repo  # git clone git@gitlab.com:lorisleiva/private-repo.git
+#
+# Found in an acticle https://lorisleiva.com/so-i-wrote-my-dotfiles
+# By driesvints a laravel maintainer
+
