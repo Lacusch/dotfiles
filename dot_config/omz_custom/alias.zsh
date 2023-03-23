@@ -18,7 +18,7 @@ function commit() {
     commitMessage="$1"
 
     if [ "$commitMessage" = "" ]; then
-        commitMessage=":pencil: Small changes"
+        commitMessage="Small changes"
     fi
 
     git add .
