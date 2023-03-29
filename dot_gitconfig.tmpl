@@ -20,48 +20,32 @@
 # 42 School Mac
 [core]
     pager = delta
-
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true
-
+    line-numbers = true
+    side-by-side = true
+#   syntax-theme = GitHub
 [merge]
     conflictstyle = diff3
-
 [diff]
     colorMoved = default
-[delta]
-    line-numbers = true
-#   syntax-theme = GitHub
-[delta]
-    side-by-side = true
-
-
 {{ else if eq .chezmoi.os "linux" }}
 # linux
 [core]
     pager = delta
-
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true
-
+    line-numbers = true
+    side-by-side = true
+#   syntax-theme = GitHub
 [merge]
     conflictstyle = diff3
-
 [diff]
     colorMoved = default
-[delta]
-    line-numbers = true
-#   syntax-theme = GitHub
-[delta]
-    side-by-side = true
-
-
 
 {{ else }}
 # other operating system
