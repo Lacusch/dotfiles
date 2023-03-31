@@ -15,38 +15,24 @@
     cd = checkout
     changed =diff --shortstat
     pop =stash pop
-
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    line-numbers = true
+    side-by-side = true
+#   syntax-theme = GitHub
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
 {{ if eq (env "HOME") "/Users/slaszlo-" }}
 # 42 School Mac
-[core]
-    pager = delta
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true
-    line-numbers = true
-    side-by-side = true
-#   syntax-theme = GitHub
-[merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
+
 {{ else if eq .chezmoi.os "linux" }}
 # linux
-[core]
-    pager = delta
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true
-    line-numbers = true
-    side-by-side = true
-#   syntax-theme = GitHub
-[merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
-
 {{ else }}
 # other operating system
 {{ end }}

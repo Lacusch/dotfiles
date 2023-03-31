@@ -103,10 +103,10 @@ source $ZSH/oh-my-zsh.sh
 [[ "$TERM_PROGRAM" != "vscode" ]] && eval "$(starship init zsh)"
 {{ if eq (env "HOME") "/Users/slaszlo-" }}
 # 42 School Mac
-#[[ "$TERM_PROGRAM" != "vscode" ]] && eval "$(starship init zsh)"
 
 {{ else if eq .chezmoi.os "linux" }}
 # linux
+
 {{ else }}
 # other operating system
 {{ end }}
