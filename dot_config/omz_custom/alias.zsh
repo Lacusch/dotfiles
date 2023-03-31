@@ -11,7 +11,7 @@ alias gac="git add . && dit commit"
 alias gam="git add . && git commit -m "
 alias push="git push"
 alias pull="git pull --rebase"
-#alias ls="exa"
+alias ls="exa"
 #Functions
 
 function commit() {
