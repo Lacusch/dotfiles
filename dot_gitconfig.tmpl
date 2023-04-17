@@ -1,3 +1,6 @@
+# vim: filetype=gitconfig
+# Set Filetype to zhs for vim syntax heighlighting
+
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
@@ -32,7 +35,9 @@
 # 42 School Mac
 
 {{ else if eq .chezmoi.os "linux" }}
-# linux
+# Linux
+{{ else if eq .chezmoi.os "Darwin" }}
+# Mac
 {{ else }}
 # other operating system
 {{ end }}
