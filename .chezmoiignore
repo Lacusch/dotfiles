@@ -1,0 +1,4 @@
+# vim: filetype=conf
+
+#Ignore markdown files
+*.md
