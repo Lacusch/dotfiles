@@ -4,12 +4,11 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Laszlo M. Szabo
-	email = slaszlo-@student.42heilbronn.de
-    editor = vim
+    name = Laszlo M. Szabo
+    email = slaszlo-@student.42heilbronn.de
 [alias]
-	p = push
-	last = log -1 HEAD
+    p = push
+    last = log -1 HEAD
     unstage = restore --staged . 
     confige = config --global -e
     ls = log --oneline
@@ -20,6 +19,7 @@
     pop =stash pop
 [core]
     pager = delta
+    editor = vim
 [interactive]
     diffFilter = delta --color-only
 [delta]
