@@ -12,7 +12,13 @@ alias gam="git add . && git commit -m "
 alias push="git push"
 alias pull="git pull --rebase"
 alias ls="exa"
-#Functions
+# Git Functions
+
+# I found these two  in an acticle:  <https://lorisleiva.com/so-i-wrote-my-dotfiles>
+# By driesvints a laravel maintainer
+
+#commit                             # git add . && git commit -am “📝 Small changes”
+#commit “:recycle: Refactor”        # git add . && git commit -am “♻️ Refactor”
 
 function commit() {
     commitMessage="$1"
@@ -25,6 +31,10 @@ function commit() {
     eval "git commit -a -m '${commitMessage}'"
 }
 
+#clone laravel/laravel              # git clone git@github.com:laravel/laravel.git
+#clone laravel/laravel blog         # git clone git@github.com:laravel/laravel.git blog
+#clone lab lorisleiva/private-repo  # git clone git@gitlab.com:lorisleiva/private-repo.git
+
 function clone() {
     if [[ $1 =~ "hub|lab" ]]; then
         provider="$1"
@@ -36,13 +46,8 @@ function clone() {
     eval "git clone git@git${provider}.com:$1.git $2"
 }
 
-# Examples
-#commit                             # git add . && git commit -am “📝 Small changes”
-#commit “:recycle: Refactor”        # git add . && git commit -am “♻️ Refactor”
-#clone laravel/laravel              # git clone git@github.com:laravel/laravel.git
-#clone laravel/laravel blog         # git clone git@github.com:laravel/laravel.git blog
-#clone lab lorisleiva/private-repo  # git clone git@gitlab.com:lorisleiva/private-repo.git
-#
-# Found in an acticle https://lorisleiva.com/so-i-wrote-my-dotfiles
-# By driesvints a laravel maintainer
+# funtion to make the generation of SSH-keys easier
 
+function ssh_key() {
+    $(if [ -n "$GIT_AUTHOR_EMAIL" ]; then EMAIL="$GIT_AUTHOR_EMAIL"; else EMAIL="(git config user.email)"; fi)
+}
