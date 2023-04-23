@@ -49,5 +49,12 @@ function clone() {
 # funtion to make the generation of SSH-keys easier
 
 function ssh_key() {
-    $(if [ -n "$GIT_AUTHOR_EMAIL" ]; then EMAIL="$GIT_AUTHOR_EMAIL"; else EMAIL="(git config user.email)"; fi)
+if [ -n "$GIT_AUTHOR_EMAIL" ]; then email="$GIT_AUTHOR_EMAIL"; else email=$(git config user.email); fi
+echo "creating ssh key with the email $email"
+ssh-keygen -t ed25519 -C "$email" && \
+echo "activating ssh-agent" && \
+eval "$(ssh-agent -s)" &&
+ssh-add ~/.ssh/id_ed25519
 }
+
+alias ssh_list="cat ~/.ssh/id_ed25519.pub"
