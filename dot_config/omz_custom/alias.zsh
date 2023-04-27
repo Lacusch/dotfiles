@@ -58,3 +58,5 @@ ssh-add ~/.ssh/id_ed25519
 }
 
 alias ssh_list="cat ~/.ssh/id_ed25519.pub"
+#alias n="fd --type f --hidden --exclude .git | fzf | xargs nvim"
+alias n="fd --type f --hidden --exclude .git | fzf --preview 'bat {1}' | xargs nvim"

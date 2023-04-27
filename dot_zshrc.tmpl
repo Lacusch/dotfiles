@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 {{ if eq (env "HOME") "/Users/slaszlo-" }}
 # 42 School Mac
 export PATH="$HOME/neovim/bin:$PATH"
+#eval "$(zoxide init zsh)"
 {{ else if eq .chezmoi.os "linux" }}
 # linux
 
