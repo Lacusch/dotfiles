@@ -60,3 +60,23 @@ ssh-add ~/.ssh/id_ed25519
 alias ssh_list="cat ~/.ssh/id_ed25519.pub"
 #alias n="fd --type f --hidden --exclude .git | fzf | xargs nvim"
 alias n="fd --type f --hidden --exclude .git | fzf --preview 'bat {1}' | xargs nvim"
+
+function article() {
+touch $(date +"%m.%d.md")
+
+cat << EOF > $(date +"%m.%d.md")
+---
+name: Article
+date: $(date +%Y.%m.%d%n)
+---
+EOF
+}
+function journal() {
+touch $(date +"%m.%d.md")
+
+cat << EOF > $(date +"%m.%d.md")
+---
+date: $(date +%Y.%m.%d%n)
+---
+EOF
+}
