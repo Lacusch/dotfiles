@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "darwin" }}
+# darwin
+{{ else if eq .chezmoi.os "linux" }}
+# linux
+{{ else }}
+# other operating system
+{{ end }}
