@@ -1,0 +1,16 @@
+# Setup XDG_config file
+# SPEC: https://specifications.freedesktop.org/basedir-spec/latest/
+# Archwiki: https://wiki.archlinux.org/title/XDG_Base_Directory
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_RUNTIME_DIR=/run/user/$UID
+
+export PAPERSIZE=a4
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export ZDOTDIR=HOME/.config/zsh
+export EDITOR=/usr/bin/vim
+export SQLITE_HISTORY=$XDG_STATE_HOME/sqlite_history
