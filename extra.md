@@ -6,3 +6,4 @@ Telegramm
 What's app
 Vscode
 Steam
+Starship

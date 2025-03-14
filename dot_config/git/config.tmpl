@@ -1,13 +1,34 @@
+# vim: filetype=gitconfig
+# Set Filetype to zhs for vim syntax heighlighting
+
+# This is Git's per-user configuration file.
+
+[core]
+	editor = vim
+	pager = delta
+[delta]
+    navigate = true
+    line-numbers = true
+    side-by-side = true
+#   syntax-theme = GitHub
+[user]
+# Specify the email address of the author/committer.
+    name = "{{ .name }}"
+# Specify the username of the author/committer.
+    email = "{{ .email }}"
+[init]
+	defaultBranch = master
+[diff]
+	colorMoved = default
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
+[include]
+    path = aliases
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[core]
-	editor = vi
-[user]
-    # Specify the email address of the author/committer.
-    name = "{{ .name }}"
-    # Specify the username of the author/committer.
-    email = "{{ .email }}"

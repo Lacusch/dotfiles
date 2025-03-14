@@ -1,0 +1,11 @@
+[alias]
+    p = push
+    last = log -1 HEAD
+    unstage = restore --staged .
+    confige = config --global -e
+    ls = log --oneline
+    alias = config --global -e
+    url = git remote get-url --all origin
+    cd = checkout
+    changed =diff --shortstat
+    pop =stash pop
