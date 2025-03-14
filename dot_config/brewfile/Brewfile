@@ -1,0 +1,23 @@
+# -*-mode:ruby-*- vim:ft=ruby
+
+# ~/.Brewfile
+# =============================================================================
+# Project dependencies installed using `brew bundle` or `~/dotfiles.sh`.
+#
+# See https://github.com/Homebrew/homebrew-bundle
+tap "homebrew/bundle"
+brew "chezmoi"
+brew install chezmoi
+tap "minio/stable"
+brew "minio/stable/minio"
+brew "curl"
+brew "fastfetch"
+brew "git-delta"
+brew "hcloud"
+brew "helix"
+brew "hugo"
+brew "lazygit"
+brew "mpv"
+brew "neovim"
+brew "zellij"
+brew "zig"
