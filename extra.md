@@ -7,3 +7,5 @@ What's app
 Vscode
 Steam
 Starship
+vim
+dnf install git-delta
