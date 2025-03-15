@@ -7,5 +7,4 @@
 # This list defines globs to ignore, and supports Go's text/template language.
 # See https://www.chezmoi.io/docs/reference/#chezmoiignore
 *.md
-
-template.example.tmpl
+template.example
