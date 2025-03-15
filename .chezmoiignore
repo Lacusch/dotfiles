@@ -8,3 +8,4 @@
 # See https://www.chezmoi.io/docs/reference/#chezmoiignore
 *.md
 
+template.example.tmpl
