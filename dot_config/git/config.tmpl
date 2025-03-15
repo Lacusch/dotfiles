@@ -2,7 +2,14 @@
 # Set Filetype to zhs for vim syntax heighlighting
 
 # This is Git's per-user configuration file.
-
+# Sources:
+#     https://delicious-insights.com/en/posts/mastering-git-submodules/
+#     https://github.com/haacked/dotfiles
+#     https://github.com/holman/dotfiles
+#     https://github.com/jayharris/dotfiles-windows
+#     https://github.com/mathiasbynens/dotfiles
+#     https://git-scm.com/docs/git-config/
+#     https://github.com/renemarc/dotfiles/blob/master/dot_gitconfig.tmpl
 [core]
 	editor = vim
 	pager = delta
@@ -26,6 +33,9 @@
 	conflictstyle = diff3
 [include]
     path = aliases
+[status]
+    # Enable submodule summary of commits.
+    submoduleSummary = true
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
